@@ -157,12 +157,7 @@ python vsrl_eval.py vcoco.pickle
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
-@article{liao2022gen,
-  title={GEN-VLKT: Simplify Association and Enhance Interaction Understanding for HOI Detection},
-  author={Liao, Yue and Zhang, Aixi and Lu, Miao and Wang, Yongliang and Li, Xiaobo and Liu, Si},
-  journal={arXiv preprint arXiv:2203.13954},
-  year={2022}
-}
+
 ```
 
 ## License
