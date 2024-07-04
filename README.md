@@ -1,7 +1,7 @@
 # NVI-DEHR
 Code for our ECCV 2024 paper "[Understanding nonverbal interaction in social environment]()".
 
-Contributed by Jianan Wei*, Tianfei Zhou*, Yi Yang and Wenguan Wang.
+Contributed by Jianan Wei*, Tianfei Zhou*, Yi Yang, and Wenguan Wang.
 
 ![](paper_images/intro.png)
 
@@ -37,7 +37,7 @@ V-COCO dataset can be downloaded [here](https://github.com/s-gupta/v-coco) and t
 For more details, check out the [GEN-VLKT](https://github.com/YueLiao/gen-vlkt).
 
 ## Pre-trained model
-Download the pretrained model of DETR detector for [ResNet50](https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth), and put it to the `params` directory.
+Download the pre-trained model of DETR detector for [ResNet50](https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth), and put it in the `params` directory.
 ```
 python ./tools/convert_parameters.py \
         --load_path params/detr-r50-e632da11.pth \
@@ -75,7 +75,7 @@ sh ./configs/vcoco.sh
 ## Evaluation
 
 ### NVI
-You can conduct the evaluation with trained parameters for NVI as follows.
+You can evaluate with trained parameters for NVI as follows.
 ```
 python -m torch.distributed.launch \
         --nproc_per_node=4 \
@@ -137,7 +137,7 @@ if __name__ == '__main__':
   vcocoeval._do_eval(det_file, ovr_thresh=0.5)
 ```
 
-Next, for the official evaluation of V-COCO, a pickle file of detection results have to be generated. You can generate the file with the following command. and then evaluate it as follows.
+Next, for the official evaluation of V-COCO, a pickle file of detection results has to be generated. You can generate the file with the following command. and then evaluate it as follows.
 ```
 python generate_vcoco_official.py \
         --param_path pretrained/VCOCO_GEN_VLKT_S.pth \
