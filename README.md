@@ -17,7 +17,7 @@ git clone https://github.com/openai/CLIP.git && cd CLIP && python setup.py devel
 ## Data preparation
 
 ### NVI
-NVI dataset can be downloaded [here](). The downloaded annotation files have to be placed as follows.
+NVI dataset can be downloaded [here](https://drive.google.com/file/d/1zapIT43PquLbtuy0oe6pAISJ8ccosilt/view?usp=sharing). The downloaded annotation files have to be placed as follows.
 ```
 data
  └─ NVI
