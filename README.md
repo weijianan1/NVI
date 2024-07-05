@@ -10,10 +10,7 @@ Install the dependencies.
 ```
 pip install -r requirements.txt
 ```
-Clone and build CLIP.
-```
-git clone https://github.com/openai/CLIP.git && cd CLIP && python setup.py develop && cd ..
-```
+
 ## Data preparation
 
 ### NVI
