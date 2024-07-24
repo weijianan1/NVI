@@ -1,5 +1,5 @@
 # NVI-DEHR
-Code for our ECCV 2024 paper "[Understanding nonverbal interaction in social environment]()".
+Code for our ECCV 2024 paper "[Nonverbal interaction detection](https://arxiv.org/abs/2407.08133)".
 
 Contributed by Jianan Wei*, Tianfei Zhou*, Yi Yang, and Wenguan Wang.
 
