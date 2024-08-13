@@ -154,7 +154,12 @@ python vsrl_eval.py vcoco.pickle
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
-
+@article{wei2024nonverbal,
+  title={Nonverbal Interaction Detection},
+  author={Wei, Jianan and Zhou, Tianfei and Yang, Yi and Wang, Wenguan},
+  journal={arXiv preprint arXiv:2407.08133},
+  year={2024}
+}
 ```
 
 ## License
