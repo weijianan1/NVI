@@ -10,6 +10,7 @@ Install the dependencies.
 ```
 pip install -r requirements.txt
 ```
+[Some files](LAVIS-main\lavis\models\clip_models\model.py) in the LAVIS library have been modified to extract complete visual features from the CLIP model.
 
 ## Data preparation
 
