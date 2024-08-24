@@ -1,0 +1,17 @@
+fairseq==0.12.0
+ftfy==6.2.0
+matplotlib==3.7.4
+numpy==1.20.0
+opencv_python_headless==4.5.5.64
+pandas==1.4.4
+Pillow==10.4.0
+regex==2023.12.25
+scipy==1.9.1
+seaborn==0.13.2
+setuptools==68.2.2
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+tqdm==4.66.4
+salesforce_lavis==1.0.1rc1
+protobuf==3.20.0
+wandb==0.16.6

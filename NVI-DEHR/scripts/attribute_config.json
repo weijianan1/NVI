@@ -1,0 +1,26 @@
+{
+    "num_classes": {
+        "expression": 7,
+        "gesture": 4,
+        "posture": 5,
+        "gaze": 3,
+        "touch": 3
+    },
+    "empty_weight": {
+        "expression": 0.1,
+        "gesture": 0.1,
+        "posture": 0.1,
+        "gaze": 0.1,
+        "touch": 0.1
+    },
+    "loss_weight": {
+        "expression": 1.0,
+        "gesture": 1.0,
+        "posture": 1.0,
+        "gaze": 1.0,
+        "touch": 1.0
+    }
+}
+
+
+
