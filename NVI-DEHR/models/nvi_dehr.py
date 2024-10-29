@@ -22,7 +22,7 @@ def _sigmoid(x):
     y = torch.clamp(x.sigmoid(), min=1e-4, max=1 - 1e-4)
     return y
 
-class GEN_VLKT(nn.Module):
+class DEHR(nn.Module):
     def __init__(self, backbone, transformer, num_queries, aux_loss=False, args=None):
         super().__init__()
 
@@ -357,7 +357,7 @@ def build(args):
 
     transformer = build_transformer(args)
 
-    model = GEN_VLKT(
+    model = DEHR(
         backbone,
         transformer,
         num_queries=args.num_queries,
