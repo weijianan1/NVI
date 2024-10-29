@@ -24,7 +24,7 @@ def _sigmoid(x):
     y = torch.clamp(x.sigmoid(), min=1e-4, max=1-1e-4)
     return y
 
-class GEN_VLKT(nn.Module):
+class DEHR(nn.Module):
     def __init__(self, backbone, transformer, vlm, txt_processors, num_queries, aux_loss=False, args=None):
         super().__init__()
 
@@ -486,7 +486,7 @@ def build(args):
 
     vlm, vis_processors, txt_processors = load_model_and_preprocess("clip_feature_extractor", model_type="ViT-B-16", is_eval=True, device=device)
 
-    model = GEN_VLKT(
+    model = DEHR(
         backbone,
         transformer,
         vlm, 
