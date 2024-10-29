@@ -8,8 +8,14 @@ Contributed by Jianan Wei*, Tianfei Zhou*, Yi Yang, and Wenguan Wang.
 ## Installation
 Install the dependencies.
 ```
-conda create -n NVI python=3.8.18
+conda create -n NVI python=3.8
+python -m pip install --upgrade pip==23.3.1
+pip install -r requirements_lavis.txt
+git clone https://github.com/salesforce/LAVIS.git
+cd LAVIS
+pip install -e .
 pip install -r requirements.txt
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 [Some files](LAVIS-main\lavis\models\clip_models\model.py) in the LAVIS library have been modified to extract complete visual features from the CLIP model.
 
