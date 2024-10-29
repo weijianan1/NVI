@@ -8,6 +8,7 @@ Contributed by Jianan Wei*, Tianfei Zhou*, Yi Yang, and Wenguan Wang.
 ## Installation
 Install the dependencies.
 ```
+conda create -n NVI python=3.8.18
 pip install -r requirements.txt
 ```
 [Some files](LAVIS-main\lavis\models\clip_models\model.py) in the LAVIS library have been modified to extract complete visual features from the CLIP model.
