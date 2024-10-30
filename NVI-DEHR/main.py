@@ -420,14 +420,14 @@ def main(args):
                 args.start_epoch = -1
                 best_epoch = checkpoint['epoch'] + 1
             model.to(device)
-            LOGGER.info('Final evaluating in test split!')
+            LOGGER.info('Final evaluating in val split!')
             test_stats = evaluate_nvi(model, postprocessors, data_loader_val, device, args, LOGGER)
 
             if args.output_dir and utils.is_main_process():
                 #  add eval in log for my convenience
                 with (output_dir / "log.txt").open("a") as f:
-                    f.write('Test result:' + json.dumps(test_stats) + "\n")
-                LOGGER.info('Epoch Test: [{}] '.format(best_epoch) + json.dumps(test_stats))
+                    f.write('Val result:' + json.dumps(test_stats) + "\n")
+                LOGGER.info('Epoch Val: [{}] '.format(best_epoch) + json.dumps(test_stats))
 
     total_time = time.time() - start_time
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))

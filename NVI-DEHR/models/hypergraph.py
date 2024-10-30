@@ -5,7 +5,6 @@ from torch import nn
 from torch.nn.parameter import Parameter
 import numpy as np
 import math
-# from .MS_HGNN_batch import MS_HGNN_oridinary, MS_HGNN_hyper, MLP
 
 class LayerNorm(nn.LayerNorm):
     """Subclass torch's LayerNorm to handle fp16."""
@@ -18,7 +17,6 @@ class LayerNorm(nn.LayerNorm):
             print(e)
         return ret.type(orig_type)
 
-# 使用XavierFill初始化的FC
 def make_fc(dim_in, hidden_dim, a=1):
     '''
         Caffe2 implementation uses XavierFill, which in fact
@@ -51,7 +49,6 @@ class HyperGraphHead(Module):
         if group_size < 1:
             group_size = 1
 
-        # 需要要讲sorted设置为false以保证结果的稳定
         _, indice = torch.topk(feat_corr, dim=2, k=group_size, largest=True, sorted=False)
         H_matrix = torch.zeros(batch, actor_number, actor_number).type_as(feat)
         H_matrix = H_matrix.scatter(2, indice, 1)
@@ -61,11 +58,11 @@ class HyperGraphHead(Module):
     def _generate_G_from_H(self, H):
         n_edge = H.size(-2)
         # the weight of the hyperedge
-        W = torch.ones(H.size()[:-1]).to(H.device)  # 将所有权重设置1
+        W = torch.ones(H.size()[:-1]).to(H.device)
         # the degree of the node
-        DV = torch.sum(H * W.unsqueeze(-1), axis=-1)  # 沿着vertex求和
+        DV = torch.sum(H * W.unsqueeze(-1), axis=-1)
         # the degree of the hyperedge
-        DE = torch.sum(H, axis=-2)  # 可能为0
+        DE = torch.sum(H, axis=-2)
 
         # invDE = torch.diag_embed(torch.pow(DE, -1), dim1=-2, dim2=-1)
         # DV2 = torch.diag_embed(torch.pow(DV, -0.5), dim1=-2, dim2=-1)
